@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "Prva_Verzija_Projekta_Mobilne",
+    "slug": "Prva_Verzija_Projekta_Mobilne"
+  }
+}
