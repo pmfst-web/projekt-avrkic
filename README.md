@@ -1,3 +1,5 @@
+# Projekt je u grani main
+
 # Projektne faze
 - [x] - Opis projekta
 - [ ] - Početna struktura aplikacije
@@ -12,9 +14,8 @@ Aplikacija za pronalazak i rezerviranje termina kod privatnih trenera. Korisnik 
 
 ## Popis funkcionalnosti
 1. Filtriranje
-2. Sortiranje
-3. Rezervacija termina
-4. Pretraživanje
+2. Povezivanje s trenerom
+3. Pretraživanje
 
 
 ## UPUTE
