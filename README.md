@@ -1,20 +1,20 @@
+# Projekt je u grani main
 # Projektne faze
 - [x] - Opis projekta
-- [ ] - Početna struktura aplikacije
-- [ ] - Prototip
+- [x] - Početna struktura aplikacije
+- [x] - Prototip
 - [ ] - Konzultacije
 - [ ] - Finalna verzija
 - [ ] - Obrana projekta
 
 # Opis projekta
 ## Kratki opis
-Aplikacija za pronalazak i rezerviranje termina kod privatnih trenera. Korisnik na početnoj stranici vidi listu ponuđenih privatnih trenera sa njihovom slikom, ocjenom, kratkim opisom i opcijom da uđe u njihov profil. Također ih može sortirati i filtrirati prema sportu, ocjeni, načinu treninga (grupni/individualni). Ulaskom na odabran profil vidi informacije, širi opis, slike i mogućnost rezervacije.
+Aplikacija za pronalazak i rezerviranje termina kod privatnih trenera. Korisnik na početnoj stranici vidi listu ponuđenih privatnih trenera sa njihovom slikom, kratkim opisom i opcijom da uđe u njihov profil. Također ih može filtrirati prema sportu, načinu treninga (grupni/individualni). Ulaskom na odabran profil vidi informacije, širi opis, slike i mogućnost rezervacije.
 
 ## Popis funkcionalnosti
 1. Filtriranje
-2. Sortiranje
-3. Rezervacija termina
-4. Pretraživanje
+2. Povezivanje s trenerom
+3. Pretraživanje
 
 
 ## UPUTE
