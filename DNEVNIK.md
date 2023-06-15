@@ -26,3 +26,14 @@ Nedostaje search implementacija, zamjena orginalnih
  i testnih podataka, prosljepšavanje izgleda aplikacije
 i dodavanje slika.
 
+
+## 15.06.2023.
+Pocetak | Kraj
+------- | ----
+22:36   | 23:20
+### Kratki opis promjena
+Implementirana search funkcija, popravljen bug gdje placene kartice 
+izazivaju error i crash aplikacije, popravljen error radi pogrešnog
+učitavnja ikona.
+Nadalje potrebno zamjeniti testne sa stvarnim podatcima što uključuje
+slike i linkove, malo proljepšati izgled aplikacije.

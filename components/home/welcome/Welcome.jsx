@@ -6,25 +6,13 @@ import { icons, SIZES, images } from '../../../constants'
 import tren from '../../../trenirci/tren'
 const filteri = ["Kickbox", "Nogomet", "Plivanje"];
 
-const Welcome = ({searchTerm, setSearchTerm}) => {
+const Welcome = () => {
   const router = useRouter();
   const [aktivanFilter, setAktivanFilter] = useState("");
   return (
     <View>
       
-      <View style={styles.searchContainer}>
-        <View style={styles.searchWrapper}>
-          <TextInput 
-          style={styles.searchInput}
-          value={searchTerm}
-          onChangeText={(text) => {setSearchTerm(text)}}
-          placeholder='Pretraži trenere'
-          
-          />
-          
-        </View>
-        
-      </View>
+      
       <View style={styles.tabsContainer}>
       <FlatList 
       showsHorizontalScrollIndicator = {false}

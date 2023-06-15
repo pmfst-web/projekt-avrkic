@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { View, ScrollView, SafeAreaView, Text } from "react-native";
+import { useState, useEffect } from "react";
+import { View, ScrollView, SafeAreaView, Text, TextInput } from "react-native";
 import tren from "../trenirci/tren"
 
 import { Stack, useRouter } from "expo-router";
@@ -16,7 +16,39 @@ sport: "Kickbox"}]
 const Home = () => {
 
     const router = useRouter();
-    const [searchTerm, setSearchTerm] = useState("");
+    const [search, setSearch] = useState("");
+    const [filteredDataSource, setFilteredDataSource] = useState([]);
+    const [masterDataSource, setMasterDataSource] = useState([]);
+
+    useEffect(() => {  
+        setFilteredDataSource(tren);
+        setMasterDataSource(tren);
+      }, []);
+
+    const searchFilterFunction = (text) => {
+        // Check if searched text is not blank
+        if (text) {
+          // Inserted text is not blank
+          // Filter the masterDataSource and update FilteredDataSource
+          const newData = masterDataSource.filter(function (item) {
+            // Applying filter for the inserted text in search bar
+            const itemData = item.ime
+              ? item.ime.toUpperCase()
+              : ''.toUpperCase();
+            const textData = text.toUpperCase();
+            return itemData.indexOf(textData) > -1;
+          });
+          setFilteredDataSource(newData);
+          setSearch(text);
+        } else {
+          // Inserted text is blank
+          // Update FilteredDataSource with masterDataSource
+          setFilteredDataSource(masterDataSource);
+          setSearch(text);
+        }
+      };
+
+
 
     return (
         <SafeAreaView style={{flex: 1, backgroundColor: COLORS.lightWhite}}>
@@ -47,16 +79,21 @@ const Home = () => {
                     <View style={styles.header}>
                     <Text style={styles.headerTitle}>Svi treneri</Text>
                     </View>
-                    <Welcome
-                    searchTerm={searchTerm}
-                    setSearchTerm={setSearchTerm}
-                    handleClick={() => {
-                      if (searchTerm) {
-                        router.push({pathname:`/search/[id]`, params:{job: pokusniPodatak}})
-                      }
-                    }}
+                    <Welcome/>
+                    <View style={styles.searchContainer}>
+                    <View style={styles.searchWrapper}>
+                    <TextInput 
+                    style={styles.searchInput}
+                    value={search}
+                    onChangeText={(text) => {searchFilterFunction(text)}}
+                    placeholder='Pretraži trenere'
                     />
-                    <Obicne poslaniPodatci={tren}/>
+
+          
+        </View>
+        
+      </View>
+                    <Obicne poslaniPodatci={filteredDataSource}/>
                     </View>
                     
             </View>

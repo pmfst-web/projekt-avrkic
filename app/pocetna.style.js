@@ -6,6 +6,28 @@ const styles = StyleSheet.create({
   container: {
     marginTop: SIZES.xLarge,
   },
+  searchInput: {
+    fontFamily: FONT.regular,
+    width: "100%",
+    height: "100%",
+    paddingHorizontal: SIZES.medium,
+  },
+  searchWrapper: {
+    flex: 1,
+    backgroundColor: COLORS.white,
+    marginRight: SIZES.small,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: SIZES.medium,
+    height: "100%",
+  },
+  searchContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    marginTop: SIZES.large,
+    height: 50,
+  },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",

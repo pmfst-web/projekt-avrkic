@@ -14,7 +14,7 @@ const PlaceneKartice = ({item, odabran, handleCardPress}) => {
       <TouchableOpacity style={styles.logoContainer(odabran, item)} //kucica slicice
       >
         
-        <Image source={{uri: item.employer_logo}}
+        <Image source={{uri: item?.employer_logo}} //postavi slike
         resizeMode='contain'
         style={styles.logoImage}
         /><Text>{item.ocjena}</Text> 

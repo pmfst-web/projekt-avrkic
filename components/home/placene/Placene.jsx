@@ -23,6 +23,16 @@ const Placene = () => {
   const router = useRouter();
   const isLoading = false;
   const error = false;
+
+  
+  const [odabran, setOdabran] = useState();
+  const handleCardPress = (trener) => {
+    router.push({pathname: `/detalji/[${trener.kljuc}]`, params: trener});
+    setOdabran(trener.kljuc);
+  };
+
+
+
   return (
 
     <View style={styles.container}>
@@ -39,12 +49,15 @@ const Placene = () => {
         data = {tren}
         renderItem={({item})=>( 
         <PlaceneKartice item={item}
+        odabran={odabran}
+        handleCardPress={handleCardPress}
         />
         )}
         keyExtractor={item => item?.kljuc}
         contentContainerStyle={{ columnGap: SIZES.medium }}
         horizontal
         showsHorizontalScrollIndicator = {false}
+        
       />
       )}
 
