@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   logoContainer: (odabran, item) => ({
     width: 50,
     height: 50,
-    backgroundColor: odabran === item.job_id ? "#172" : COLORS.white,
+    backgroundColor: odabran === item.job_id ? COLORS.white : COLORS.white,
 
     borderRadius: SIZES.medium,
     justifyContent: "space-around",
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   logoContainer1: (odabran, item) => ({
     width: 150,
     height: 150,
-    backgroundColor: odabran === item.job_id ? "#892" : COLORS.white,
+    backgroundColor: odabran === item.job_id ? "#172" : COLORS.white,
 
     borderRadius: SIZES.medium,
     justifyContent: "space-around",
@@ -43,8 +43,9 @@ const styles = StyleSheet.create({
     display:"flex"
   }),
   logoImage: {
-    width: "70%",
-    height: "70%",
+    width: "100%",
+    height: "100%",
+    borderRadius: SIZES.small / 1.25,
   },
   companyName: {
     fontSize: SIZES.medium,
@@ -55,13 +56,14 @@ const styles = StyleSheet.create({
   infoContainer: {
     marginTop: SIZES.large,
   },
-  jobName: (odabran, item) => ({
+  ime: (odabran, item) => ({
     fontSize: SIZES.large,
     fontFamily: FONT.medium,
     color: odabran === item.job_id ? COLORS.white : COLORS.primary,
     
+    
   }),
-  jobNameDesno: (odabran, item) => ({
+  redizajnImena: (odabran, item) => ({
     fontSize: SIZES.large,
     fontFamily: FONT.medium,
     color: odabran === item.job_id ? COLORS.white : COLORS.primary,

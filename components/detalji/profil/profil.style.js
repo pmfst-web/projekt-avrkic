@@ -9,16 +9,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logoBox: {
-    width: 80,
-    height: 80,
+    width: 400,
+    height: 200,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#FFF",
     borderRadius: SIZES.large,
   },
   logoImage: {
-    width: "80%",
-    height: "80%",
+    width: "100%",
+    height: "100%",
+    borderRadius: SIZES.small / 1.25,
   },
   naslovBox: {
     marginTop: SIZES.small,

@@ -3,10 +3,9 @@ import {useState} from 'react'
 import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native'
 
 
-import tren from '../../../trenirci/tren';
+
 import { useRouter } from 'expo-router'
-import {NavigationContainer} from '@react-navigation/native';
-import Detalji from '../../../app/detalji/[id]';
+
 
 
 
@@ -22,7 +21,7 @@ const Obicne = ({poslaniPodatci}) => {
   const error = false;
   const podatci = poslaniPodatci
 
-  //console.log(podatci);
+
   return (
 
     <View style={styles.container}>

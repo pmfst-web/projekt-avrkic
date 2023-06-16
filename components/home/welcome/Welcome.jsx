@@ -3,8 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, FlatList, Image } from 'react-
 import { useRouter } from 'expo-router'
 import styles from './welcome.style'
 import { icons, SIZES, images } from '../../../constants'
-import tren from '../../../trenirci/tren'
-const filteri = ["Kickbox", "Nogomet", "Plivanje"];
+const filteri = ["Kickbox", "Nogomet", "Plivanje", "Boks", "Tenis", "BodyBuilding", "Košarka"];
 
 const Welcome = () => {
   const router = useRouter();
@@ -24,7 +23,7 @@ const Welcome = () => {
         pretrazi = item;
         
         
-    console.log(item);
+
     
    
     router.push({pathname: `/search/${item}`});

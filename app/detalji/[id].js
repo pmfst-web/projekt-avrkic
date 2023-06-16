@@ -8,36 +8,34 @@ import {Profil, Opis, Footer, Tabovi, ScreenHeaderBtn, Opcenito} from "../../com
 import {COLORS, icons, SIZES} from "../../constants";
 import tren from "../../trenirci/tren";
 import { ScrollView } from "react-native-gesture-handler";
+import { checkImageURL } from "./sporedneSlike";
+import { checkURL } from "./linkoviIG";
+const tabs = ["Opis", "Općenito"];
 
-const tabs = ["Opis", "Opcenito", "Budi kreativan"];
 
 
+const Detalji = () => {
 
-const Detalji = ({route, navigation}) => {
+    const trener = useLocalSearchParams();
 
-    const molimte = useLocalSearchParams();
-    const params = useSearchParams(); //dohvati id na kojem smo
     
     const router = useRouter();
     const [refreshing, setRefreshing] = useState(false);
     const [activeTab, setActiveTab] = useState(tabs[0]);
     const onRefresh = () => {};
+
     const displayTabContent = () => {
         switch (activeTab) {
-            case "Opcenito":
+            case "Općenito":
                 return<Opcenito
                 title="Opcenito"
-                points={molimte}
-                />//points se gleda kao funkcija i tako pise dalje mos to prominit u nesto drugo
+                points={trener}
+                />
             case "Opis":
                 return <Opis
-                info={molimte ?? "No data provided"}
+                info={trener ?? "No data provided"}
                 />
-            case "Budi kreativan":
-                return <Opcenito
-                title="Budi kreativan"
-                points={molimte}
-                />//points se gleda kao funkcija i tako pise dalje mos to prominit u nesto drugo
+
 
         }
 
@@ -72,10 +70,10 @@ const Detalji = ({route, navigation}) => {
 
             <View style={{padding: SIZES.medium, paddingBottom: 100}}>
             <Profil
-                    //companyLogo = {tren[0].employer_logo}
-                    jobtitle = {tren[0].ime}
-                    companyName = {tren[0].nacin}
-                    Location = {tren[0].sport}
+                    urlSlike = {checkImageURL(trener.kljuc)}
+                    naslov = {trener.ime}
+                    ime = {trener.sport}
+                    lokacija = {trener.lokacija}
                 
                 />
                 <Tabovi
@@ -91,7 +89,7 @@ const Detalji = ({route, navigation}) => {
 
 
         </ScrollView>
-        <Footer url={tren[0]?.job_google_link ?? 'https://elearning.pmfst.unist.hr/?redirect=0'} />
+        <Footer url={tren[0]?.link ?? checkURL(trener.kljuc)} />
         </>
 
         </SafeAreaView>

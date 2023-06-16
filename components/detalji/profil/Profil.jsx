@@ -3,12 +3,12 @@ import { View, Text, Image } from 'react-native'
 
 import styles from './profil.style'
 import {icons} from "../../../constants"
-// za image se koristia style={styles.logoImage}
-const Profil = ({urlSlike, naslov, ime, Location}) => {
+
+const Profil = ({urlSlike, naslov, ime, lokacija}) => {
   return (
     <View style={styles.container}>
-      <View>
-        <Image source={{uri: urlSlike}} /> 
+      <View style={styles.logoBox}>
+        <Image source={{uri: urlSlike}} style={styles.logoImage}/> 
       </View>
       <View style={styles.naslovBox}>
         <Text style={styles.ime}>{naslov}</Text>
@@ -21,11 +21,11 @@ const Profil = ({urlSlike, naslov, ime, Location}) => {
           resizeMode='contain'
           style={styles.locationImage}
           />
-          <Text style={styles.locationName}>{Location}</Text>
+          <Text style={styles.locationName}>{lokacija}</Text>
         </View>
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default Profil
+export default Profil;

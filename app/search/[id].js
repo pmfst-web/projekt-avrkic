@@ -23,11 +23,10 @@ const Search = () => {
     const onRefresh = () => {};
     
     pretrazi =JSON.stringify(poslaniPodatci.id);
-        console.log("Nogomet")
-        console.log(pretrazi)
+
         const info = tren.filter(function(tren) {return tren.sport == poslaniPodatci.id});
         
-        console.log(info)
+
     return (
         <SafeAreaView style={{flex: 1, backgroundColor: COLORS.lightWhite}}>
             <Stack.Screen options={{headerStyle: {backgroundColor: COLORS.lightWhite},

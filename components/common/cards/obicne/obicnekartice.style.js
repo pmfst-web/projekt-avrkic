@@ -19,12 +19,14 @@ const styles = StyleSheet.create({
     height: 50,
     backgroundColor: COLORS.white,
     borderRadius: SIZES.medium,
-    justifyContent: "center",
+    justifyContent: "space-around",
     alignItems: "center",
+    display : "flex"
   },
-  logImage: {
-    width: "70%",
-    height: "70%",
+  logoImage: {
+    width: "100%",
+    height: "100%",
+    borderRadius: SIZES.small / 1.25,
   },
   textContainer: {
     flex: 1,

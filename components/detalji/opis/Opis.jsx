@@ -7,10 +7,18 @@ const Opis = ({ info }) => {
     <View style={styles.container}>
       <Text style={styles.headText}>Opis trenera:</Text>
 
-      <View style={styles.contentBox}>
-        <Text style={styles.contextText}>{info.kratkiOpis}</Text>
+      <View style={styles.pointsContainer}>
+        {
+          <View style={styles.pointWrapper} key={info.kljuc}>
+            <View style={styles.pointDot} />
+            <Text style={styles.pointText}>Način treniranja: {info.nacin}</Text>
+          </View>
+        }
+
       </View>
-    </View>
+      <Text style={styles.contextText}>{info.kratkiOpis}</Text>
+      </View>
+
   );
 };
 

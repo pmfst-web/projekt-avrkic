@@ -37,3 +37,11 @@ izazivaju error i crash aplikacije, popravljen error radi pogrešnog
 učitavnja ikona.
 Nadalje potrebno zamjeniti testne sa stvarnim podatcima što uključuje
 slike i linkove, malo proljepšati izgled aplikacije.
+
+
+## 15.06.2023.
+Pocetak | Kraj
+------- | ----
+12:36   | 23:17
+### Kratki opis promjena
+Popravljene slike, linkovi i napravljen redizajn aplikacije.

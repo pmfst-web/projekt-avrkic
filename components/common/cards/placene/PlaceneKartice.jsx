@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 
 import styles from './placenekartice.style'
-
+import { checkImageURL } from '../../../../app/detalji/profilneSlike'
 const PlaceneKartice = ({item, odabran, handleCardPress}) => {
   return (
     
@@ -10,24 +10,24 @@ const PlaceneKartice = ({item, odabran, handleCardPress}) => {
     style={styles.container(odabran, item)} //pozadina
     onPress={() => handleCardPress(item)}
     > 
-    <TouchableOpacity >
-      <TouchableOpacity style={styles.logoContainer(odabran, item)} //kucica slicice
+    <View style={{ justifyContent: "space-around",
+    alignItems: "center",
+    display:"flex"}} >
+      <View style={styles.logoContainer(odabran, item)} //kucica slicice
       >
         
-        <Image source={{uri: item?.employer_logo}} //postavi slike
-        resizeMode='contain'
+        <Image source={{uri: checkImageURL(item.kljuc)}}
+        resizeMode='cover'
         style={styles.logoImage}
-        /><Text>{item.ocjena}</Text> 
+
+        />
         
-      </TouchableOpacity>
-      </TouchableOpacity>
-
-      <Text style={styles.companyName} numberOfLines={3}>{item.kratkiOpis}</Text>
-      <View style={styles.infoContainer}>
-        <Text style={styles.location} numberOfLines={1}>{item.ocjena}</Text>
-        <Text style={styles.location}>{item.ime}</Text>
-
       </View>
+      
+      </View>
+      <Text style={styles.ime}>{item.ime}</Text>
+      <Text style={styles.companyName} numberOfLines={3}>{item.kratkiOpis}</Text>
+      
 
     </TouchableOpacity>
   )
